@@ -9,15 +9,11 @@ This project includes two major analytical components:
 1. **Multimodal permutation testing** across EEG, fMRI, sMRI, and psychometric features.  
 2. **Mediation analysis** examining indirect pathways between genotype, neuroimaging biomarkers, and psychological traits.
 
-### 📊 Multimodal Permutation Testing Overview
+### 📊 Multimodal Permutation Testing and Mediation Analyses Framework Overview
 <p align="center">
-  <img src="figures/workflow_v3.png" width="650">
+  <img src="figures/MA-v4.png" width="650">
 </p>
 
-### 🔗 Mediation Model Used in the Study
-<p align="center">
-  <img src="figures/mediation_analysis_workflow_v2.png" width="450">
-</p>
 
 This repository contains the complete analysis pipeline used in the multimodal neuroimaging and mediation study. The structure keeps EEG preprocessing, feature extraction, permutation testing, and mediation workflows cleanly modular.
 
@@ -55,7 +51,13 @@ MM-Mediation-Genes-AD/
 │   │   # JASP file with mediation models, effects, confidence intervals, bootstraps
 │   │
 │   ├── utils.py
-│       # Shared helper functions and utility methods
+│   |    # Shared helper functions and utility methods
+|   |
+│   ├── mediation_grid.R (Omnibus mediation analysis in R)
+│   |    # Omnibus mediation analysis in R
+|   |__ run_pairwise_significant_mediations.R (post-hoc mediation analysis in R)
+|        # Post-hoc pairwise mediation analysis in R
+|   
 │
 └── README.md
     # Project overview (this file)
